@@ -4,9 +4,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Login</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <style>
-      /* Reset */
       * {
         margin: 0;
         padding: 0;
@@ -213,7 +215,7 @@
         <!-- Inserir a imagem da logo aqui -->
         <img src="assets/img/amoedo_logo.png" alt="Logo da Empresa" class="logo" />
         <h2 class="active">Login</h2>
-        <form class="box-login" method="post" action="backend/verificar_login2.php">
+        <form class="box-login" method="post" action="#">
           <input
             type="text"
             id="email"
@@ -230,7 +232,7 @@
           />
           <input type="submit" class="botao" value="Entrar" />
         </form>
-        <a href="cadastro.php" class="link"
+        <a href="#" class="link"
           >Não possui uma conta? Cadastre-se</a
         >
       </div>
