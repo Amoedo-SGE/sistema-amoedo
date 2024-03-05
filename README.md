@@ -1,4 +1,4 @@
-# Amoedo SGE
+# Amoedo SGE (Sistema de Gerenciamento de Eventos)
 
 ## Introdução
 
