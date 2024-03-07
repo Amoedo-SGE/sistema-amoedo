@@ -37,10 +37,10 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados em se
 4.  Abra o arquivo `config.php` e configure as variáveis de ambiente, especialmente as relacionadas à conexão com o banco de dados.
 
        ```dotenv
-      $servername = "127.0.0.1";
-      $username = "root";
-      $password = "";
-      $dbname = "amoedo_sge";
+      $servername = "seuserver";
+      $username = "seuusuario";
+      $password = "suasenha";
+      $dbname = "seubdd";
        ```
        
 5. Importe o arquivo sql `amoedo_sge.sql` para criar as tabelas do banco de dados
