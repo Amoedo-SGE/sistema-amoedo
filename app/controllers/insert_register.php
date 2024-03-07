@@ -26,15 +26,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql_log = "INSERT INTO logs (usuario, log_data, acao) VALUES ('$username', NOW(), '$acao')";
         
         if ($conn->query($sql_log) === TRUE) {
-            echo "Usuário registrado com sucesso!";
+            $response = array("success" => true, "message" => "Usuário registrado com sucesso!");
         } else {
-            echo "Erro ao inserir registro de log: " . $conn->error;
+            $response = array("success" => false, "message" => "Erro ao inserir registro de log: " . $conn->error);
         }
     } else {
-        echo "Erro ao registrar o usuário: " . $conn->error;
+        $response = array("success" => false, "message" => "Erro ao registrar o usuário: " . $conn->error);
     }
 
     // Fecha a conexão com o banco de dados
     $conn->close();
+
+    // Retorna a resposta em formato JSON
+    echo json_encode($response);
 }
 ?>
