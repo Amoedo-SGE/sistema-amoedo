@@ -10,6 +10,8 @@
   <link rel="shortcut icon" href="../public/assets/favicon/favicon.ico" type="image/x-icon">
   <!-- CSS DA PÁGINA -->
   <link rel="stylesheet" type="text/css" href="../../../public/assets/css/page_register.css">
+  <!-- CSS DO TOAST -->
+  <link rel="stylesheet" type="text/css" href="../../../public/assets/css/toast.css">
 
 </head>
 
@@ -38,6 +40,9 @@
       <img src="../../../public/assets/img/amoedo_logo.png" alt="Logo da Empresa" class="logo">
     </div>
   </div>
+
+  <script src="../../../public/assets/js/toast_register.js"></script>
+
 </body>
 
 </html>
