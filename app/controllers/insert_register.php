@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $cargo = $_POST["cargo"];
 
-    // Prepara e executa a query SQL para inserir os dados na tabela
+    // Prepara e executa a query SQL para inserir os dados na tabela de usuários
     $sql = "INSERT INTO user (nome, usuario, cargo) VALUES ('$username', '$password', '$cargo')";
 
     if ($conn->query($sql) === TRUE) {
@@ -21,7 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['password'] = $password;
         $_SESSION['cargo'] = $cargo;
         
-        echo "Usuário registrado com sucesso!";
+        // Insere o registro na tabela de logs
+        $acao = "Usuario Cadastrado";
+        $sql_log = "INSERT INTO logs (usuario, log_data, acao) VALUES ('$username', NOW(), '$acao')";
+        
+        if ($conn->query($sql_log) === TRUE) {
+            echo "Usuário registrado com sucesso!";
+        } else {
+            echo "Erro ao inserir registro de log: " . $conn->error;
+        }
     } else {
         echo "Erro ao registrar o usuário: " . $conn->error;
     }
