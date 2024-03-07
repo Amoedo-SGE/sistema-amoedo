@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/03/2024 às 14:54
+-- Tempo de geração: 07/03/2024 às 17:29
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -49,11 +49,8 @@ CREATE TABLE `eventos` (
 CREATE TABLE `logs` (
   `id` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
-  `data_usuario_criado` timestamp NOT NULL DEFAULT current_timestamp(),
-  `data_evento_criado` timestamp NOT NULL DEFAULT current_timestamp(),
-  `data_status_pagamento` timestamp NOT NULL DEFAULT current_timestamp(),
-  `data_usuario_editado` timestamp NOT NULL DEFAULT current_timestamp(),
-  `data_evento_editado` timestamp NOT NULL DEFAULT current_timestamp()
+  `log_data` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `acao` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -91,6 +88,28 @@ ALTER TABLE `logs`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `logs`
+--
+ALTER TABLE `logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

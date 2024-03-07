@@ -1,8 +1,11 @@
 <?php
+// Inicia a sessão
+session_start();
+
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    include_once 'config.php';
+    include_once '../models/config.php';
 
     // Prepara os dados do formulário para inserção no banco de dados
     $username = $_POST["username"];
@@ -13,6 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO user (nome, usuario, cargo) VALUES ('$username', '$password', '$cargo')";
 
     if ($conn->query($sql) === TRUE) {
+        // Armazena os dados do formulário na sessão
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['cargo'] = $cargo;
+        
         echo "Usuário registrado com sucesso!";
     } else {
         echo "Erro ao registrar o usuário: " . $conn->error;
