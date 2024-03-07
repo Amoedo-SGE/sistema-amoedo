@@ -6,8 +6,8 @@
   <title>Registro</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <!-- FAVICON -->
-  <link rel="icon" href="../public/assets/favicon/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="../public/assets/favicon/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="../../../public/assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="a../../../public/assets/favicon/favicon.ico" type="image/x-icon">
   <!-- CSS DA PÁGINA -->
   <link rel="stylesheet" type="text/css" href="../../../public/assets/css/page_register.css">
   <!-- CSS DO TOAST -->
