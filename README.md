@@ -27,14 +27,21 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados em se
     ```bash
     cd sistema-amoedo
     ```
+
+3. Inicie o json do Composer:
+
+    ```bash
+    composer init
+    ```
+
     
-3. Instale as dependências do Composer:
+4. Instale as dependências do Composer:
 
     ```bash
     composer install
     ```
 
-4.  Abra o arquivo `config.php` e configure as variáveis de ambiente, especialmente as relacionadas à conexão com o banco de dados.
+5.  Abra o arquivo `config.php` e configure as variáveis de ambiente, especialmente as relacionadas à conexão com o banco de dados.
 
        ```dotenv
       $servername = "seuserver";
@@ -43,4 +50,4 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados em se
       $dbname = "seubdd";
        ```
        
-5. Importe o arquivo sql `amoedo_sge.sql` para criar as tabelas do banco de dados
+6. Importe o arquivo sql `amoedo_sge.sql` para criar as tabelas do banco de dados
