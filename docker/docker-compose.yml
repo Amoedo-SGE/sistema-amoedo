@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE: amoedo_sge
+      - MYSQL_USER: root
+      - MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3306:3306"
+
+  app-amoedo:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database

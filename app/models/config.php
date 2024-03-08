@@ -2,7 +2,7 @@
 // Conexão com o banco de dados 
 $servername = "127.0.0.1";
 $username = "root";
-$password = "";
+$password = "root123";
 $dbname = "amoedo_sge";
 
 // Cria a conexão
